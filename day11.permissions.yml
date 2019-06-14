@@ -1,0 +1,30 @@
+add day11entity entities:
+  title: 'Create new Day11entity entities'
+
+administer day11entity entities:
+  title: 'Administer Day11entity entities'
+  description: 'Allow to access the administration form to configure Day11entity entities.'
+  restrict access: true
+
+delete day11entity entities:
+  title: 'Delete Day11entity entities'
+
+edit day11entity entities:
+  title: 'Edit Day11entity entities'
+
+view published day11entity entities:
+  title: 'View published Day11entity entities'
+
+view unpublished day11entity entities:
+  title: 'View unpublished Day11entity entities'
+
+view all day11entity revisions:
+  title: 'View all Day11entity revisions'
+
+revert all day11entity revisions:
+  title: 'Revert all Day11entity revisions'
+  description: 'Role requires permission <em>view Day11entity revisions</em> and <em>edit rights</em> for day11entity entities in question or <em>administer day11entity entities</em>.'
+
+delete all day11entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Day11entity revisions</em> and <em>delete rights</em> for day11entity entities in question or <em>administer day11entity entities</em>.'

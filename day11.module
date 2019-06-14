@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains day11.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function day11_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the day11 module.
+    case 'help.page.day11':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function create_entity ($name, $phone_number) {
+	$array = [
+		'field_name' => $name,
+    'field_telephone_number' => $phone_number,];
+    $entity = day11Entity::create($array);
+    $entity -> save();
+    return('Entity created and fields added.');
+}
+
+function read_entity ($nid) {
+	$node_storage = \Drupal::entityTypeManager()->getStorage('day11_entity');
+	$node = $node_storage->load($nid);
+	$new = $node->get('name')->value;
+	//print_r($new);
+	return $newpoints;
+}
+
+function update_entity ($nid) {
+	$email = 'aa@aa.aa';
+	$address = 'aaaaaa';
+	$node_storage = \Drupal::entityTypeManager()->getStorage('day11_entity');
+  $node = $node_storage->load($nid);
+  $node->set('field_email_address', $email );
+  $node->set('field_address', $address);
+  $node->save();
+  return('Entity and fields updated.');
+}
+
+function delete_entity ($nid) {
+	$node_storage = \Drupal::entityTypeManager()->getStorage('day11_entity');
+  $node = $node_storage->load($nid);
+  $node->delete();
+}

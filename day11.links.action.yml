@@ -1,0 +1,5 @@
+entity.day11_entity.add_form:
+  route_name: entity.day11_entity.add_form
+  title: 'Add Day11entity'
+  appears_on:
+    - entity.day11_entity.collection

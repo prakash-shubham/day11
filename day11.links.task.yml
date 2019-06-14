@@ -1,0 +1,27 @@
+# Day11entity routing definition
+day11_entity.settings_tab:
+  route_name: day11_entity.settings
+  title: 'Settings'
+  base_route: day11_entity.settings
+
+entity.day11_entity.canonical:
+  route_name: entity.day11_entity.canonical
+  base_route: entity.day11_entity.canonical
+  title: 'View'
+
+entity.day11_entity.edit_form:
+  route_name: entity.day11_entity.edit_form
+  base_route: entity.day11_entity.canonical
+  title: 'Edit'
+
+entity.day11_entity.version_history:
+  route_name: entity.day11_entity.version_history
+  base_route: entity.day11_entity.canonical
+  title: 'Revisions'
+
+entity.day11_entity.delete_form:
+  route_name:  entity.day11_entity.delete_form
+  base_route:  entity.day11_entity.canonical
+  title: Delete
+  weight: 10
+
